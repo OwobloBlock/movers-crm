@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Time Estimator</title>
+    
+</head>
+<body>
+    <h1>Moving Time Estimator</h1>
+    <form id="movingForm">
+        <div class="progress-bar">
+            <div class="step active">Moving Details</div>
+            <div class="step">Room Selection</div>
+            <div class="step">Item Details</div>
+            <div class="step">Results</div>
+        </div>
+
+        <div class="form-step" id="step-moving-details">
+            <h2>Moving Details</h2>
+            <div class="moving-details">
+                <div>
+                    <label for="office-address">Office Address:</label>
+                    <input type="text" id="office-address" name="office-address" required>
+                </div>
+                <div>
+                    <label for="old-address">Old House Address:</label>
+                    <input type="text" id="old-address" name="old-address" required>
+                </div>
+                <div>
+                    <label for="new-address">New House Address:</label>
+                    <input type="text" id="new-address" name="new-address" required>
+                </div>
+                <div>
+                    <label for="stairs">Number of stairs:</label>
+                    <input type="number" id="stairs" name="stairs" required>
+                </div>
+                <div>
+                    <label for="elevators">Elevators available:</label>
+                    <input type="checkbox" id="elevators" name="elevators">
+                </div>
+                <div>
+                    <label for="movers">Number of Movers:</label>
+                    <input type="number" id="movers" name="movers" min="1" value="1" required>
+                </div>
+            </div>
+            <button type="button">Next</button>
+        </div>
+
+        <div class="form-step" id="step-room-selection" style="display: none;">
+            <h2>Room Selection</h2>
+            <div class="search-container">
+                <input type="text" id="item-search" placeholder="Search items...">
+                <button type="button" id="clear-search">Clear</button>
+            </div>
+            <div class="item-grid">
+                <!-- All your item inputs go here -->
+                <div class="item-input">
+                    <img src="icons/bar_portable.png" alt="Bar, Portable" class="item-icon">
+                    <label for="bar_portable">Bar, Portable</label>
+                    <select id="bar_portable" name="bar_portable">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <!-- Add all other items here following the same structure -->
+            </div>
+            <button type="button">Previous</button>
+            <button type="button">Next</button>
+        </div>
+
+        <!-- Add similar structure for item-details and results steps -->
+    </form>
+    <!-- Google Maps API script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeL6e836vAysveF-95y7EagUCyuCyOkK8&libraries=places"></script>
+
+       <link rel="stylesheet" href="css/styles.css">
+       <script src="js/items.js"></script>
+       <script src="js/script.js"></script>
+</body>
+</html>
+            
